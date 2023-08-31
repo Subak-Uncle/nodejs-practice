@@ -27,7 +27,6 @@ exports.findAllMovies = async (req, res, next) => {
 };
 
 exports.findMovieByMovieNo = async (req, res, next) => {
-  console.log(req.params.movie_no);
   const result = await MovieService.findMovieByMovieNo(req.params.movie_no);
   if (result) {
     res.status(HttpStatus.OK).send({
